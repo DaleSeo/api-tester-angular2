@@ -1,4 +1,4 @@
-class Status {
+export class Status {
     code: number;
     text: string;
 }

@@ -10,15 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
 var api_component_1 = require("./api/api.component");
+var api_history_component_1 = require("./api/api.history.component");
+var test_form_component_1 = require("./api/test.form.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, api_component_1.ApiComponent],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+            declarations: [
+                app_component_1.AppComponent,
+                api_component_1.ApiComponent,
+                api_history_component_1.ApiHistoryComponent,
+                test_form_component_1.TestFormComponent
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

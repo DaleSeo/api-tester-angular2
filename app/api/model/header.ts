@@ -1,4 +1,4 @@
-class Header {
-    name: string;
-    value: string;
+export class Header {
+  name: string;
+  value: string;
 }
