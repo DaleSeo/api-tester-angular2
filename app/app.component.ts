@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import {ApiComponent} from "./api/api.component";
 
 @Component({
   selector: 'api-tester',
-  template: `<h1>test</h1>`
+  template: `<api></api>`,
+  directives: [ApiComponent]
 })
 export class AppComponent {
 }

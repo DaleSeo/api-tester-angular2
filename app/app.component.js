@@ -9,13 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var api_component_1 = require("./api/api.component");
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'api-tester',
-            template: "<h1>test</h1>"
+            template: "<api></api>",
+            directives: [api_component_1.ApiComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
