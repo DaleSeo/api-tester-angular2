@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var url_1 = require("./model/url");
 var api_1 = require("./model/api");
-var history_1 = require("./model/history");
+var history_1 = require("./model/test");
 var ApiHistoryComponent = (function () {
     function ApiHistoryComponent() {
         this.histories = [];
@@ -22,7 +22,7 @@ var ApiHistoryComponent = (function () {
         var api = new api_1.Api();
         api.method = 'GET';
         api.url = url;
-        var history = new history_1.History();
+        var history = new history_1.Test();
         history.api = api;
         history.date = new Date();
         history.user = 'Dale Seo';
@@ -30,8 +30,8 @@ var ApiHistoryComponent = (function () {
     };
     ApiHistoryComponent = __decorate([
         core_1.Component({
-            selector: 'api-history',
-            templateUrl: 'app/api/api.history.component.html'
+            selector: 'test-history',
+            templateUrl: 'test.history.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], ApiHistoryComponent);

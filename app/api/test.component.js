@@ -16,7 +16,7 @@ var ApiComponent = (function () {
     ApiComponent = __decorate([
         core_1.Component({
             selector: 'api',
-            templateUrl: 'app/api/api.component.html'
+            templateUrl: 'test.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], ApiComponent);

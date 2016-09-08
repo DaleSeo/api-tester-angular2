@@ -12,8 +12,8 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
-var api_component_1 = require("./api/api.component");
-var api_history_component_1 = require("./api/api.history.component");
+var api_component_1 = require("./api/test.component.ts");
+var api_history_component_1 = require("./api/test.history.component.ts");
 var test_form_component_1 = require("./api/test.form.component");
 var AppModule = (function () {
     function AppModule() {
@@ -24,7 +24,7 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 api_component_1.ApiComponent,
-                api_history_component_1.ApiHistoryComponent,
+                api_history_component_1.TestHistoryComponent,
                 test_form_component_1.TestFormComponent
             ],
             bootstrap: [app_component_1.AppComponent]

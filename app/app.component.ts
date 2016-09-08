@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'api-tester',
-  template: `<api></api>`
+  template: `<test></test>`
 })
 export class AppComponent {
 }
