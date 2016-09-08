@@ -11,11 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var url_1 = require("../model/url");
 var test_1 = require("../model/test");
-var TestHistoryComponent = (function () {
-    function TestHistoryComponent() {
+var TestListComponent = (function () {
+    function TestListComponent() {
         this.tests = [];
     }
-    TestHistoryComponent.prototype.ngOnInit = function () {
+    TestListComponent.prototype.ngOnInit = function () {
         var url = new url_1.Url();
         url.host = 'www.google.com';
         var test = new test_1.Test();
@@ -27,15 +27,18 @@ var TestHistoryComponent = (function () {
         this.tests.push(test);
         this.tests.push(test);
     };
-    TestHistoryComponent = __decorate([
+    TestListComponent.prototype.create = function (test) {
+        this.tests.push(test);
+    };
+    TestListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'test-list',
             templateUrl: 'test.list.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], TestHistoryComponent);
-    return TestHistoryComponent;
+    ], TestListComponent);
+    return TestListComponent;
 }());
-exports.TestHistoryComponent = TestHistoryComponent;
+exports.TestListComponent = TestListComponent;
 //# sourceMappingURL=test.list.component.js.map

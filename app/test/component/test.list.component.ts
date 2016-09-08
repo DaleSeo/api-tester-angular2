@@ -7,10 +7,10 @@ import {Test} from "../model/test";
   selector: 'test-list',
   templateUrl: 'test.list.component.html'
 })
-export class TestHistoryComponent implements OnInit {
+export class TestListComponent implements OnInit {
   tests: Test[] = [];
 
-  ngOnInit() {
+  ngOnInit(): void {
     let url: Url = new Url();
     url.host = 'www.google.com';
 
@@ -24,4 +24,9 @@ export class TestHistoryComponent implements OnInit {
     this.tests.push(test);
     this.tests.push(test);
   }
+
+  create(test: Test): void {
+    this.tests.push(test);
+  }
+
 }

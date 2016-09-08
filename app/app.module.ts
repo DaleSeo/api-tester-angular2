@@ -4,7 +4,7 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }   from './app.component';
 import {ApiComponent} from "./test/component/test.component";
-import {TestHistoryComponent} from "./test/component/test.list.component";
+import {TestListComponent} from "./test/component/test.list.component";
 import {TestFormComponent} from "./test/component/test.form.component";
 
 @NgModule({
@@ -12,7 +12,7 @@ import {TestFormComponent} from "./test/component/test.form.component";
   declarations: [
     AppComponent,
     ApiComponent,
-    TestHistoryComponent,
+    TestListComponent,
     TestFormComponent
   ],
   bootstrap:    [ AppComponent ]

@@ -24,7 +24,7 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 test_component_1.ApiComponent,
-                test_list_component_1.TestHistoryComponent,
+                test_list_component_1.TestListComponent,
                 test_form_component_1.TestFormComponent
             ],
             bootstrap: [app_component_1.AppComponent]

@@ -6,10 +6,10 @@
       <!--<api-list></api-list>-->
     </div>
     <div class="col-xs-6">
-      <test-form></test-form>
+      <test-form (onSubmitted)="testList.create($event)"></test-form>
     </div>
     <div class="col-xs-3">
-      <test-list></test-list>
+      <test-list #testList></test-list>
     </div>
   </div>
 </div>
