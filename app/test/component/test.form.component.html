@@ -1,1 +1,20 @@
 <h2>Test Form</h2>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="method">Method</label>
+    <select [(ngModel)]="test.method" name="method" class="form-control" id="method" required>
+      <option *ngFor="let method of methods" [value]="method">{{method}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="url">URL</label>
+    <input [(ngModel)]="test.url.host" name="url" type="text" class="form-control" id="url" placeholder="http://" required #url="ngModel">
+    <div [hidden]="url.valid || url.pristine" class="alert alert-danger">Url is required</div>
+  </div>
+  <div class="form-group">
+    <label for="body">Body</label>
+    <input [(ngModel)]="test.req.body" name="body" type="text" class="form-control" id="body">
+  </div>
+  <button (click)="send()" type="button" class="btn btn-default">Call</button>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

@@ -24,6 +24,8 @@ var TestHistoryComponent = (function () {
         test.date = new Date();
         test.user = 'Dale Seo';
         this.tests.push(test);
+        this.tests.push(test);
+        this.tests.push(test);
     };
     TestHistoryComponent = __decorate([
         core_1.Component({

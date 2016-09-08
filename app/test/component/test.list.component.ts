@@ -21,5 +21,7 @@ export class TestHistoryComponent implements OnInit {
     test.user = 'Dale Seo';
 
     this.tests.push(test);
+    this.tests.push(test);
+    this.tests.push(test);
   }
 }
