@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {Url} from "./model/url";
-import {Test} from "./model/test";
+import {Url} from "../model/url";
+import {Test} from "../model/test";
 
 @Component({
-  selector: 'test-history',
-  templateUrl: 'test.history.component.html'
+  moduleId: module.id,
+  selector: 'test-list',
+  templateUrl: 'test.list.component.html'
 })
 export class TestHistoryComponent implements OnInit {
   tests: Test[] = [];

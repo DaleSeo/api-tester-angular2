@@ -9,18 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ApiComponent = (function () {
-    function ApiComponent() {
-        this.heading = 'Api Tester';
+var TestFormComponent = (function () {
+    function TestFormComponent() {
     }
-    ApiComponent = __decorate([
+    TestFormComponent = __decorate([
         core_1.Component({
-            selector: 'api',
-            templateUrl: 'test.component.html'
+            moduleId: module.id,
+            selector: 'test-form',
+            templateUrl: 'test.form.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], ApiComponent);
-    return ApiComponent;
+    ], TestFormComponent);
+    return TestFormComponent;
 }());
-exports.ApiComponent = ApiComponent;
-//# sourceMappingURL=api.component.js.map
+exports.TestFormComponent = TestFormComponent;
+//# sourceMappingURL=test.form.component.js.map

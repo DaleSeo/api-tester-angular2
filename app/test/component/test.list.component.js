@@ -9,17 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var TestFormComponent = (function () {
-    function TestFormComponent() {
+var url_1 = require("../model/url");
+var test_1 = require("../model/test");
+var TestHistoryComponent = (function () {
+    function TestHistoryComponent() {
+        this.tests = [];
     }
-    TestFormComponent = __decorate([
+    TestHistoryComponent.prototype.ngOnInit = function () {
+        var url = new url_1.Url();
+        url.host = 'www.google.com';
+        var test = new test_1.Test();
+        test.method = 'GET';
+        test.url = url;
+        test.date = new Date();
+        test.user = 'Dale Seo';
+        this.tests.push(test);
+    };
+    TestHistoryComponent = __decorate([
         core_1.Component({
-            selector: 'test-form',
-            templateUrl: 'app/api/test.form.component.html'
+            moduleId: module.id,
+            selector: 'test-list',
+            templateUrl: 'test.list.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], TestFormComponent);
-    return TestFormComponent;
+    ], TestHistoryComponent);
+    return TestHistoryComponent;
 }());
-exports.TestFormComponent = TestFormComponent;
-//# sourceMappingURL=test.form.component.js.map
+exports.TestHistoryComponent = TestHistoryComponent;
+//# sourceMappingURL=test.list.component.js.map

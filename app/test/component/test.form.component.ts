@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'test-form',
-  templateUrl: 'app/api/test.form.component.html'
+  templateUrl: 'test.form.component.html'
 })
 export class TestFormComponent {
 }
