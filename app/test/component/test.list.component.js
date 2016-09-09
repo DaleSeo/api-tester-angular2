@@ -14,6 +14,7 @@ var test_1 = require("../model/test");
 var TestListComponent = (function () {
     function TestListComponent() {
         this.tests = [];
+        this.onSelected = new core_1.EventEmitter();
     }
     TestListComponent.prototype.ngOnInit = function () {
         var url = new url_1.Url();
@@ -27,9 +28,17 @@ var TestListComponent = (function () {
         this.tests.push(test);
         this.tests.push(test);
     };
+    TestListComponent.prototype.loadForm = function (test) {
+        console.log('>>> loadForm : ' + JSON.stringify(test));
+        this.onSelected.emit(test);
+    };
     TestListComponent.prototype.create = function (test) {
         this.tests.push(test);
     };
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], TestListComponent.prototype, "onSelected", void 0);
     TestListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

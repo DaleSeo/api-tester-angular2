@@ -1,15 +1,19 @@
 <div class="container">
-  <h1>{{heading}}</h1>
   <div class="row">
-    <div class="col-xs-3">
+    <div class="col-sm-12">
+      <h1>{{heading}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
       api-list
       <!--<api-list></api-list>-->
     </div>
-    <div class="col-xs-6">
-      <test-form (onSubmitted)="testList.create($event)"></test-form>
+    <div class="col-sm-6">
+      <test-form (onSubmitted)="testList.create($event)" #testForm></test-form>
     </div>
-    <div class="col-xs-3">
-      <test-list #testList></test-list>
+    <div class="col-sm-3">
+      <test-list (onSelected)="testForm.setTest($event)" #testList></test-list>
     </div>
   </div>
 </div>

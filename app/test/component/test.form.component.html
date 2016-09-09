@@ -8,7 +8,7 @@
   <div class="form-group">
     <label>URL</label>
     <div class="row">
-      <div class="col-xs-3">
+      <div class="col-sm-3">
         <label class="sr-only" for="scheme"></label>
         <div class="input-group">
           <select [(ngModel)]="test.url.scheme" name="scheme" class="form-control" id="scheme" required>
@@ -17,7 +17,7 @@
           <div class="input-group-addon">://</div>
         </div>
       </div>
-      <div class="col-xs-9">
+      <div class="col-sm-9">
         <label class="sr-only" for="host"></label>
         <input [(ngModel)]="test.url.host" name="host" type="text" class="form-control" id="host" placeholder="host" required>
       </div>
@@ -25,7 +25,7 @@
   </div>
   <div class="form-group">
     <label for="body">Body</label>
-    <textarea [(ngModel)]="test.req.body" name="body" id="body" class="form-control" rows="10"></textarea>
+    <textarea name="body" id="body" class="form-control" rows="10"></textarea>
   </div>
   <div class="form-group pull-right">
     <button type="Submit" class="btn btn-default"> Send </button>

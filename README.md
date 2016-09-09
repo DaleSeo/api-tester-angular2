@@ -1,4 +1,4 @@
 # API Tester
 
 ## TO DO
-- Test History -> Test Form
+- ngFor 에서 (click) 이벤트 줄 때 주의할 게 있을 거 같음

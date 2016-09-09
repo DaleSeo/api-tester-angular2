@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Url} from "../model/url";
 import {Test} from "../model/test";
 
@@ -9,6 +9,9 @@ import {Test} from "../model/test";
 })
 export class TestListComponent implements OnInit {
   tests: Test[] = [];
+
+  @Output()
+  onSelected: EventEmitter<Test> = new EventEmitter();
 
   ngOnInit(): void {
     let url: Url = new Url();
@@ -23,6 +26,11 @@ export class TestListComponent implements OnInit {
     this.tests.push(test);
     this.tests.push(test);
     this.tests.push(test);
+  }
+
+  loadForm(test: Test): void {
+    console.log('>>> loadForm : ' + JSON.stringify(test));
+    this.onSelected.emit(test)
   }
 
   create(test: Test): void {

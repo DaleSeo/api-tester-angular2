@@ -29,6 +29,10 @@ var TestFormComponent = (function () {
         console.log('onSubmit');
         this.onSubmitted.emit(this.test);
     };
+    TestFormComponent.prototype.setTest = function (test) {
+        console.log('>>> setTest : ' + JSON.stringify(test));
+        this.test = test;
+    };
     __decorate([
         core_1.Output(), 
         __metadata('design:type', core_1.EventEmitter)

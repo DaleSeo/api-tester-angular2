@@ -29,4 +29,9 @@ export class TestFormComponent implements OnInit {
     this.onSubmitted.emit(this.test);
   }
 
+  setTest(test: Test): void {
+    console.log('>>> setTest : ' + JSON.stringify(test));
+    this.test = test;
+  }
+
 }
