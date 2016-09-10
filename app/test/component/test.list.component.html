@@ -1,4 +1,4 @@
 <h2>History</h2>
 <ul class="list-group">
-  <li *ngFor="let test of tests" (click)="loadForm(test)" class="list-group-item">{{test.method}} {{test.url.toFullUrl()}}</li>
+  <li *ngFor="let test of tests" (click)="loadForm(test)" class="list-group-item"><i class="glyphicon glyphicon-chevron-right"></i> {{test.method}} {{test.url.toFullUrl()}}</li>
 </ul>
