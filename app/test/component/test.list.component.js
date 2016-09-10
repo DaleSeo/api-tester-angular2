@@ -30,7 +30,7 @@ var TestListComponent = (function () {
     };
     TestListComponent.prototype.loadForm = function (test) {
         console.log('>>> loadForm : ' + JSON.stringify(test));
-        this.onSelected.emit(Object.create(test));
+        this.onSelected.emit(test);
     };
     TestListComponent.prototype.create = function (test) {
         this.tests.push(test);

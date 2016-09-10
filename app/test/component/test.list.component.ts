@@ -30,7 +30,7 @@ export class TestListComponent implements OnInit {
 
   loadForm(test: Test): void {
     console.log('>>> loadForm : ' + JSON.stringify(test));
-    this.onSelected.emit(Object.create(test))
+    this.onSelected.emit(test)
   }
 
   create(test: Test): void {

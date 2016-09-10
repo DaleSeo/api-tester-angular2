@@ -31,7 +31,7 @@ var TestFormComponent = (function () {
     };
     TestFormComponent.prototype.setTest = function (test) {
         console.log('>>> setTest : ' + JSON.stringify(test));
-        this.test = test;
+        this.test = JSON.parse(JSON.stringify(test));
     };
     __decorate([
         core_1.Output(), 
