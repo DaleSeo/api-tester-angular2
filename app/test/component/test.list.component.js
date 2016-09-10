@@ -17,20 +17,20 @@ var TestListComponent = (function () {
         this.onSelected = new core_1.EventEmitter();
     }
     TestListComponent.prototype.ngOnInit = function () {
-        var url = new url_1.Url();
-        url.host = 'www.google.com';
-        var test = new test_1.Test();
-        test.method = 'GET';
-        test.url = url;
-        test.date = new Date();
-        test.user = 'Dale Seo';
-        this.tests.push(test);
-        this.tests.push(test);
-        this.tests.push(test);
+        for (var i = 0; i < 10; i++) {
+            var url = new url_1.Url();
+            url.host = 'www.google.com/' + i;
+            var test = new test_1.Test();
+            test.method = 'GET';
+            test.url = url;
+            test.date = new Date();
+            test.user = 'Dale Seo';
+            this.tests.push(test);
+        }
     };
     TestListComponent.prototype.loadForm = function (test) {
         console.log('>>> loadForm : ' + JSON.stringify(test));
-        this.onSelected.emit(test);
+        this.onSelected.emit(Object.create(test));
     };
     TestListComponent.prototype.create = function (test) {
         this.tests.push(test);

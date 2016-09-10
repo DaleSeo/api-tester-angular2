@@ -14,23 +14,23 @@ export class TestListComponent implements OnInit {
   onSelected: EventEmitter<Test> = new EventEmitter();
 
   ngOnInit(): void {
-    let url: Url = new Url();
-    url.host = 'www.google.com';
+    for (let i = 0; i < 10; i++) {
+      let url: Url = new Url();
+      url.host = 'www.google.com/' + i;
 
-    let test = new Test();
-    test.method = 'GET';
-    test.url = url;
-    test.date = new Date();
-    test.user = 'Dale Seo';
+      let test = new Test();
+      test.method = 'GET';
+      test.url = url;
+      test.date = new Date();
+      test.user = 'Dale Seo';
 
-    this.tests.push(test);
-    this.tests.push(test);
-    this.tests.push(test);
+      this.tests.push(test);
+    }
   }
 
   loadForm(test: Test): void {
     console.log('>>> loadForm : ' + JSON.stringify(test));
-    this.onSelected.emit(test)
+    this.onSelected.emit(Object.create(test))
   }
 
   create(test: Test): void {
