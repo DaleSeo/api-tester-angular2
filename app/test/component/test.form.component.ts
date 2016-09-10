@@ -31,7 +31,8 @@ export class TestFormComponent implements OnInit {
 
   setTest(test: Test): void {
     console.log('>>> setTest : ' + JSON.stringify(test));
-    this.test = JSON.parse(JSON.stringify(test));
+    this.test = test;
+    // this.test = JSON.parse(JSON.stringify(test));
   }
 
 }

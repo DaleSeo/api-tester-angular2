@@ -17,7 +17,7 @@ var TestListComponent = (function () {
         this.onSelected = new core_1.EventEmitter();
     }
     TestListComponent.prototype.ngOnInit = function () {
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 5; i++) {
             var url = new url_1.Url();
             url.host = 'www.google.com/' + i;
             var test = new test_1.Test();
@@ -33,6 +33,7 @@ var TestListComponent = (function () {
         this.onSelected.emit(test);
     };
     TestListComponent.prototype.create = function (test) {
+        console.log('>>> create : ' + JSON.stringify(test));
         this.tests.push(test);
     };
     __decorate([
