@@ -1,6 +1,6 @@
 <div class="panel-group">
   <div *ngFor="let test of tests" (click)="loadForm(test)" class="panel panel-default">
-    <div class="panel-heading"><a data-toggle="collapse" data-target="#{{test.id}}" href="#{{test.id}}">{{test.method}} {{test.url.toFullUrl()}}</a></div>
+    <div class="panel-heading"><a data-toggle="collapse" data-parent=".panel-group" href="#{{test.id}}">{{test.method}} {{test.url.toFullUrl()}}</a></div>
     <div id="{{test.id}}" class="panel-collapse collapse">
       <div class="panel-body">api-test</div>
     </div>
