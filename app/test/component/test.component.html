@@ -1,19 +1,21 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
-      <h1>{{heading}}</h1>
-    </div>
-  </div>
-  <div class="row">
     <div class="col-sm-3">
-      api-list
-      <!--<api-list></api-list>-->
+      <ul class="nav nav-pills nav-justified">
+        <li><a href="#list">API List</a></li>
+        <li><a href="#history" class="active">History</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="list" class="tab-pane fade">
+          api-list
+        </div>
+        <div id="history" class="tab-pane active">
+          <test-list (onSelected)="testForm.setTest($event)" #testList></test-list>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-9">
       <test-form (onSubmitted)="testList.create($event)" #testForm></test-form>
-    </div>
-    <div class="col-sm-3">
-      <test-list (onSelected)="testForm.setTest($event)" #testList></test-list>
     </div>
   </div>
 </div>

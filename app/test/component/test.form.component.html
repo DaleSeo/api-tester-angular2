@@ -1,34 +1,36 @@
-<form (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label for="method">Method</label>
-    <select [(ngModel)]="test.method" name="method" class="form-control" id="method" required>
-      <option *ngFor="let method of methods" [value]="method">{{method}}</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label>URL</label>
-    <div class="row">
-      <div class="col-sm-3">
-        <label class="sr-only" for="scheme"></label>
-        <div class="input-group">
-          <select [(ngModel)]="test.url.scheme" name="scheme" class="form-control" id="scheme" required>
-            <option *ngFor="let scheme of schemes" [value]="scheme">{{scheme}}</option>
-          </select>
-          <div class="input-group-addon">://</div>
+<div class="well">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="method">Method</label>
+      <select [(ngModel)]="test.method" name="method" class="form-control" id="method" required>
+        <option *ngFor="let method of methods" [value]="method">{{method}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>URL</label>
+      <div class="row">
+        <div class="col-sm-4">
+          <label class="sr-only" for="scheme"></label>
+          <div class="input-group">
+            <select [(ngModel)]="test.url.scheme" name="scheme" class="form-control" id="scheme" required>
+              <option *ngFor="let scheme of schemes" [value]="scheme">{{scheme}}</option>
+            </select>
+            <div class="input-group-addon">://</div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <label class="sr-only" for="host"></label>
+          <input [(ngModel)]="test.url.host" name="host" type="text" class="form-control" id="host" placeholder="host" required>
         </div>
       </div>
-      <div class="col-sm-9">
-        <label class="sr-only" for="host"></label>
-        <input [(ngModel)]="test.url.host" name="host" type="text" class="form-control" id="host" placeholder="host" required>
-      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="body">Body</label>
-    <textarea name="body" id="body" class="form-control" rows="10"></textarea>
-  </div>
-  <div class="form-group text-right">
-    <button type="Submit" class="btn btn-default"> Send </button>
-    <button type="reset" class="btn btn-default">Reset</button>
-  </div>
-</form>
+    <div class="form-group">
+      <label for="body">Body</label>
+      <textarea name="body" id="body" class="form-control" rows="10"></textarea>
+    </div>
+    <div class="form-group text-right">
+      <button type="Submit" class="btn btn-primary"> Send </button>
+      <button type="reset" class="btn btn-default">Reset</button>
+    </div>
+  </form>
+</div>

@@ -21,6 +21,7 @@ var TestListComponent = (function () {
             var url = new url_1.Url();
             url.host = 'www.google.com/' + i;
             var test = new test_1.Test();
+            test.id = i;
             test.method = 'GET';
             test.url = url;
             test.date = new Date();

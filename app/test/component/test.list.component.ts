@@ -19,6 +19,7 @@ export class TestListComponent implements OnInit {
       url.host = 'www.google.com/' + i;
 
       let test = new Test();
+      test.id = i;
       test.method = 'GET';
       test.url = url;
       test.date = new Date();

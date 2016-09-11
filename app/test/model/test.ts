@@ -3,6 +3,7 @@ import {Req} from "./req";
 import {Res} from "./res";
 
 export class Test {
+  id: number;
   method: string;
   url: Url;
   req: Req;
